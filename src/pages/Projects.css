@@ -28,17 +28,9 @@
     margin: 0 auto;
   }
   
-  /* Marquee Effect */
-  .projects-marquee {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-  
   .projects-track {
     display: flex;
     gap: 2rem;
-    animation: scroll 25s linear infinite;
   }
   
   .project-card {
@@ -101,13 +93,15 @@
     color: #667eea;
   }
   
-  /* Animation */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
+  @media (max-width: 480px) {
+    .project-card {
+      padding: 1rem;
     }
-    100% {
-      transform: translateX(-50%);
+    .project-card h3 {
+      font-size: 1.3rem;
+    }
+    .project-card p {
+      font-size: 0.95rem;
     }
   }
   

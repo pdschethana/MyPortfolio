@@ -1,9 +1,8 @@
-/* Footer.css */
 .footer {
-    background-color: #1f2937; /* same dark gray as navbar */
+    background-color: #1f2937;
     padding: 1rem 2rem;
     text-align: center;
-    color: #d1d5db; /* light gray */
+    color: #d1d5db;
   }
   
   .footer p {
@@ -19,12 +18,12 @@
   }
   
   .footer-links a {
-    color: #d1d5db; /* light gray */
+    color: #d1d5db;
     font-size: 1.2rem;
     transition: color 0.3s;
   }
   
   .footer-links a:hover {
-    color: #ffffff; /* white on hover */
+    color: #ffffff;
   }
   

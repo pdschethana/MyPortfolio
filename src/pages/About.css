@@ -1,16 +1,13 @@
 .about-container {
     max-width: 1100px;
-    margin: 2rem auto 0 auto; /* space from navbar */
+    margin: 2rem auto;
     padding: 3rem 1rem;
     background: linear-gradient(135deg, #667eea, #764ba2);
     font-family: "Poppins", sans-serif;
     color: #f9fafb;
-    border-top-left-radius: 50px;  /* curved top-left */
-    border-top-right-radius: 50px; /* curved top-right */
-    border-bottom-left-radius: 30px;  /* optional bottom curves */
-    border-bottom-right-radius: 30px; /* optional bottom curves */
-}
-
+    border-radius: 50px 50px 30px 30px;
+  }
+  
   .about-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -18,7 +15,7 @@
   
   .about-header h2 {
     font-size: 3rem;
-    color: #e0e7ff; /* light accent */
+    color: #e0e7ff;
     margin-bottom: 10px;
   }
   
@@ -35,9 +32,8 @@
     gap: 2rem;
   }
   
-  /* Card Styling */
   .about-card {
-    background: rgba(255,255,255,0.1); /* semi-transparent cards */
+    background: rgba(255,255,255,0.1);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -72,12 +68,10 @@
     color: #d1d5db;
   }
   
-  /* Responsive tweaks */
   @media (max-width: 768px) {
     .about-header h2 {
       font-size: 2.2rem;
     }
-  
     .about-card h3 {
       font-size: 1.5rem;
     }
