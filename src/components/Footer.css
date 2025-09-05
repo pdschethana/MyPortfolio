@@ -1,0 +1,30 @@
+/* Footer.css */
+.footer {
+    background-color: #1f2937; /* same dark gray as navbar */
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #d1d5db; /* light gray */
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .footer-links a {
+    color: #d1d5db; /* light gray */
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #ffffff; /* white on hover */
+  }
+  
