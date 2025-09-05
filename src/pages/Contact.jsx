@@ -39,7 +39,7 @@ function Contact() {
         <p>
           <FaEnvelope className="contact-icon" />{" "}
           <a href="mailto:supunichethana9@example.com">
-            supunichethana9@example.com
+            supunichethana9@gmail.com
           </a>
         </p>
         <p>
