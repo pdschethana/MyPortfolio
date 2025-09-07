@@ -1,121 +1,125 @@
 .projects-container {
-    padding: 50px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #f0f4ff, #e6f7ff);
-    overflow: hidden;
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f4ff, #e6f7ff);
+}
+
+.projects-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #0a3d62;
+}
+
+.projects-intro {
+  color: #34495e;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* --- Flex Layout for One Row --- */
+.projects-grid {
+  display: flex;
+  justify-content: center;   /* center row */
+  align-items: stretch;      /* ✅ equal heights */
+  gap: 20px;                 /* space between cards */
+  flex-wrap: nowrap;         /* ✅ force one row */
+  overflow-x: auto;          /* ✅ allow scroll if too many cards */
+  padding-bottom: 10px;
+}
+
+/* --- Project Card --- */
+.project-card {
+  flex: 0 0 240px; /* ✅ fixed equal width */
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column; /* stack content */
+  justify-content: space-between; /* stretch content */
+  height: 320px; /* ✅ fixed equal height */
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f9fbff, #eef7ff);
+  border-color: #0077ff;
+}
+
+/* --- Text Styling --- */
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  flex-grow: 1; /* ✅ pushes footer down */
+}
+
+/* --- Tech Badges --- */
+.project-tech {
+  margin: 10px 0;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: #0077ff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tech-badge:hover {
+  transform: scale(1.1);
+  background: #1e90ff;
+}
+
+/* Different badge colors */
+.tech-badge:nth-child(2) { background: #27ae60; }
+.tech-badge:nth-child(3) { background: #e67e22; }
+.tech-badge:nth-child(4) { background: #9b59b6; }
+
+/* --- Links --- */
+.project-link {
+  display: inline-block;
+  margin-top: auto;
+  text-decoration: none;
+  background: #0a3d62;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.project-link:hover {
+  background: #1e90ff;
+  transform: translateY(-2px);
+}
+
+/* ✅ Mobile Fix */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-wrap: wrap; /* ✅ stack on small screens */
+    justify-content: center;
   }
-  
-  .projects-header h2 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #0a3d62;
-  }
-  
-  .projects-intro {
-    color: #34495e;
-    margin-bottom: 35px;
-    font-size: 1rem;
-  }
-  
-  .projects-marquee {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .projects-track {
-    display: flex;
-    gap: 24px;
-    animation: scroll 25s linear infinite;
-  }
-  
+
   .project-card {
-    flex: 0 0 auto;
-    width: 280px;
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 22px;
-    text-align: left;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 90%;
+    height: auto; /* allow flexible height on mobile */
   }
-  
-  .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #2c3e50;
-  }
-  
-  .project-card p {
-    color: #555;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-  }
-  
-  .project-tech {
-    margin: 12px 0;
-  }
-  
-  .tech-badge {
-    display: inline-block;
-    background: #0077ff;
-    color: #fff;
-    border-radius: 8px;
-    padding: 6px 12px;
-    margin: 4px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: background 0.3s ease;
-  }
-  
-  .tech-badge:nth-child(1) { background: #0077ff; } /* Blue */
-  .tech-badge:nth-child(2) { background: #27ae60; } /* Green */
-  .tech-badge:nth-child(3) { background: #e67e22; } /* Orange */
-  .tech-badge:nth-child(4) { background: #9b59b6; } /* Purple */
-  
-  .project-link {
-    display: inline-block;
-    margin-top: 12px;
-    text-decoration: none;
-    background: #0a3d62;
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background 0.3s ease;
-  }
-  
-  .project-link:hover {
-    background: #1e90ff;
-  }
-  
-  /* Marquee Animation */
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  
-  /* ✅ Responsive Fix */
-  @media (max-width: 768px) {
-    .project-card {
-      width: 230px;
-      padding: 18px;
-    }
-  
-    .projects-track {
-      gap: 18px;
-      animation: scroll 20s linear infinite;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .project-card {
-      width: 200px;
-    }
-  }
-  
+}

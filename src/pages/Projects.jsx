@@ -38,36 +38,33 @@ function Projects() {
         </p>
       </div>
 
-      <div className="projects-marquee">
-        <div className="projects-track">
-          {[...projects, ...projects].map((project, index) => (
-            <div className="project-card" key={index}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-tech">
-                {project.tech.map((tech, idx) => (
-                  <span className="tech-badge" key={idx}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              {project.link && (
-                <a
-                  href={project.link}
-                  className="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-              )}
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div className="project-tech">
+              {project.tech.map((tech, idx) => (
+                <span className="tech-badge" key={idx}>
+                  {tech}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
+            {project.link && (
+              <a
+                href={project.link}
+                className="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
 export default Projects;
-
